@@ -1,0 +1,118 @@
+.footer {
+	display: inline-flexbox;
+	text-align: center;
+	margin-block: var(--margin-md);
+
+	@include desktop {
+		margin-block: var(--margin-lg);
+	}
+
+	@include tablet {
+		margin-block: var(--margin-md);
+	}
+
+	.stay-connected {
+		padding: var(--padding-most-common);
+
+		@include mobile {
+			padding: calc(var(--padding-most-common) * 0.5);
+		}
+
+		&__highlighting {
+			font-family: var(--font-family-highlight);
+			font-size: calc(var(--text-lg) + 15px);
+
+			@include desktop {
+				line-height: var(--line-height-sm);
+				font-size: calc(var(--text-lg) + 12px);
+			}
+
+			@include tablet {
+				font-size: calc(var(--text-lg) + 10px);
+			}
+
+			@include mobile {
+				font-size: calc(var(--text-lg) - 2px);
+				line-height: calc(var(--line-height-sm) - 10px);
+			}
+		}
+
+		h1 {
+			font-family: var(--font-family-header);
+			margin-bottom: var(--margin-md);
+			font-size: var(--text-lg);
+			font-weight: var(--heavy-text);
+
+			@include desktop {
+				font-size: calc(var(--text-lg) - 2px);
+			}
+
+			@include tablet {
+				font-size: calc(var(--text-lg) - 5px);
+				margin-bottom: calc(var(--margin-md) - 6px);
+			}
+
+			@include mobile {
+				font-size: calc(var(--text-lg) - 15px);
+				margin-bottom: calc(var(--margin-sm) * 0.5);
+			}
+		}
+
+		p {
+			font-family: var(--font-family-body);
+			margin-bottom: var(--margin-md);
+			font-size: var(--text-sm);
+
+			@include tablet {
+				font-size: calc(var(--text-sm) - 2px);
+			}
+
+			@include mobile {
+				margin-bottom: var(--margin-sm);
+				font-size: calc(var(--text-sm) - 4px);
+			}
+		}
+
+		.connection-icons {
+			display: flex;
+			justify-content: center;
+	
+			.icon {
+				padding-inline: calc(var(--padding-sm) * (1 / 3));
+
+				@include mobile {
+					padding-inline: calc(var(--padding-sm) * (1 / 5) + 1px);
+				}
+
+				&__space {
+					border-radius: var(--border-radius-sm);
+					padding: calc(var(--padding-most-common) * 0.5);
+					box-shadow: var(--shadow-icons);
+
+					@include mobile {
+						width: calc((var(--size-sm) / 6) - 7.5px);
+					}
+				}
+			}
+		}
+	}
+}
+
+.rights {
+	display: flex;
+	justify-content: center;
+	font-family: var(--font-family-body);
+
+	.copy-rights {
+		margin-bottom: var(--margin-sm);
+		font-size: var(--text-sm);
+
+		@include tablet {
+			font-size: calc(var(--text-sm) - 2px);
+		}
+
+		@include mobile {
+			font-size: calc(var(--text-sm) - 4px);
+		}
+	}
+}

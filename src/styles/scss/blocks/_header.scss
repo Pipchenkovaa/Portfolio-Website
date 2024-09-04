@@ -1,0 +1,210 @@
+.container {
+	display: inline;
+	justify-content: center;
+	max-width: var(--size-lg);
+
+	.introduction {
+		margin: 50px auto;
+		display: flex;
+		max-width: var(--size-md);
+		justify-content: space-between;
+
+		@include desktop {
+			display: grid;
+  		place-items: center;
+			justify-content: center;
+		}
+		
+		@include tablet {
+			display: grid;
+  		place-items: center;
+			justify-content: center;
+			max-width: calc(var(--size-md) - 430px);
+			margin: 30px auto;
+		}
+
+		@include mobile {
+			max-width: calc(var(--size-sm) + 160px);
+			margin: 20px auto;
+		}
+
+		@include mobile-small {
+			max-width: calc(var(--size-sm) + 50px);
+			margin: 10px auto;
+		}
+
+		.card {
+			border-radius: calc(var(--border-radius-lg) + 5px);
+
+			@include desktop {
+				width: var(--width-full);
+			}
+
+			@include mobile {
+				border-radius: calc(var(--border-radius-lg) - 5px);
+			}
+		}
+		
+		.welcome-info {
+			max-width: calc((var(--size-lg) + 20px) / 2);
+			padding: var(--padding-combined-lg);
+
+			@include mobile {
+				padding: var(--padding-combined-md);
+			}
+			
+			&__socials {
+				font-family: var(--font-family-body);
+				display: flex;
+				align-items: center;
+				
+				@include mobile {
+					margin-bottom: calc(var(--margin-sm) - 5px);
+				}
+
+				.github-contact {
+					margin-right: calc(var(--margin-sm) - 3px);
+
+					@include tablet {
+						width: calc((var(--size-sm) / 10) - 6px);
+					}
+				}
+
+				.connection {
+					display: flex;
+					justify-content: space-between;
+					padding: 8px 16px;
+					border-radius: var(--border-radius-sm);
+					box-shadow: var(--shadow-icons);
+					font-size: calc(var(--text-sm) - 2px);
+
+					@include tablet {
+						font-size: calc(var(--text-sm) - 2px);
+						padding: 10px 14px;
+					}
+
+					@include mobile {
+						font-size: calc(var(--text-sm) - 4px);
+						padding: 8px 14px;
+					}
+				}
+
+				.telegram-contact {
+					margin-inline: var(--margin-sm);
+				}
+
+				.social-link {
+					border-radius: var(--border-radius-sm);
+					padding: calc(var(--padding-most-common) * 0.5);
+					box-shadow: var(--shadow-icons);
+
+					@include tablet {
+						width: calc((var(--size-sm) / 6) - 5px);
+					}
+					
+					@include mobile {
+						width: calc((var(--size-sm) / 6) - 7.5px);
+					}
+				}
+			}
+		
+			&__main-text {
+				font-family: var(--font-family-header);
+				margin-block: calc(var(--margin-md) + 3px);
+				font-size: calc(var(--text-lg) - 3px);
+				font-weight: var(--heavy-text);
+				line-height: var(--line-height-lg);
+
+				@include desktop {
+					font-size: calc(var(--text-lg) - 3px);
+				}
+
+				@include tablet {
+					font-size: calc(var(--text-lg) - 5px);
+					margin-block: calc(var(--margin-md) - 2px);
+					line-height: calc(var(--line-height-lg) - 2px);
+				}
+
+				@include mobile {
+					font-size: calc(var(--text-lg) - 15px);
+					margin-block: calc(var(--margin-sm) + 5px);
+					line-height: calc(var(--line-height-sm) + 2px);
+				}
+				
+				@include mobile-small {
+					margin-block: calc(var(--margin-sm) + 3px);
+				}
+
+				&__highlighting {
+					font-family: var(--font-family-highlight);
+					font-size: calc(var(--text-lg) + 15px);
+		
+					@include desktop {
+						line-height: var(--line-height-sm);
+					}
+
+					@include tablet {
+						font-size: calc(var(--text-lg) + 12px);
+					}
+
+					@include mobile {
+						font-size: calc(var(--text-lg) - 4px);
+						line-height: calc(var(--line-height-sm) - 10px);
+					}
+				}
+			}
+
+			&__additional-text {
+				font-family: var(--font-family-body);
+				font-size: var(--text-sm);
+				line-height: calc(var(--line-height-sm) + 3px);
+
+				@include tablet {
+					font-size: calc(var(--text-sm) - 2px);
+					line-height: var(--line-height-sm);
+				}
+
+				@include mobile {
+					font-size: calc(var(--text-sm) - 4px);
+					line-height: calc(var(--line-height-sm) - 4px);
+				}
+			}
+		}
+
+		.avatar {
+			display: flex;
+			min-width: calc(var(--size-sm) + (var(--size-sm) / 10));
+
+			@include desktop {
+				display: block;
+				margin-top: var(--margin-md);
+				max-width: var(--size-md);
+			}
+
+			@include tablet {
+				max-width: calc(var(--size-md) - 400px);
+				margin-bottom: calc(var(--margin-sm) - 2px);
+			}
+			 @include mobile {
+				margin-top: calc(var(--margin-sm) + 5px);
+			 }
+			
+			&__image {
+				margin: auto;
+				width: calc(var(--size-sm) - 30px);
+				
+				@include tablet {
+					width: calc(var(--size-sm) - 60px);
+				}
+				
+				@include mobile {
+					width: calc(var(--size-sm) - 112px);
+				}
+				
+				@include mobile-small {
+					width: calc(var(--size-sm) - 50px);
+				}
+			} 
+		}
+	}
+}

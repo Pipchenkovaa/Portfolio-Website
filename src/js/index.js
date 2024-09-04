@@ -1,0 +1,1 @@
+import { model } from "./mainModel.js"

@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.border-common {
+	@apply border border-borderLight
+}
+
+.border-right {
+	@apply border-r border-borderLight
+}
+
+.background-gradient {
+	@apply bg-gradient-to-b from-borderBG to-transparent
+}
+
+.headers-text-color {
+	@apply text-firstText
+}
+
+.body-text-color {
+	@apply text-secondText
+}
+
+.button-link-decor {
+	@apply border border-borderLight hover:border-hoverLight focus:border-hoverLight transition-all duration-300
+}
+
+.headers-link {
+	@apply hover:text-hoverLight transition-all duration-300
+}
+
+.card-decor {
+	@apply bg-borderBG border border-borderLight
+}
+
+.dark-card {
+	@apply border-2 border-borderLight hover:border-hoverLight focus:border-hoverLight hover:shadow-xlLight focus:shadow-xlLight transition-all duration-300 hover:scale-105
+}
+
+.light-card {
+	@apply border-2 border-borderLight hover:border-borderLight focus:border-borderLight hover:shadow-xlDark focus:shadow-xlDark transition-all duration-300 hover:scale-105
+}
