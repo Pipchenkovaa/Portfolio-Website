@@ -854,19 +854,19 @@
 }
 .footer .stay-connected h1 {
   font-family: var(--font-family-header);
-  margin-bottom: var(--margin-md);
+  margin-bottom: calc(var(--margin-md) * 0.5);
   font-size: var(--text-lg);
   font-weight: var(--heavy-text);
 }
 @media (max-width: 1280px) {
   .footer .stay-connected h1 {
     font-size: calc(var(--text-lg) - 2px);
+    margin-bottom: calc(var(--margin-md) - 6px);
   }
 }
 @media (max-width: 1024px) {
   .footer .stay-connected h1 {
     font-size: calc(var(--text-lg) - 5px);
-    margin-bottom: calc(var(--margin-md) - 6px);
   }
 }
 @media (max-width: 768px) {
