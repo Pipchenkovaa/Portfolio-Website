@@ -588,6 +588,10 @@ video {
   }
 }
 
+.block {
+  display: block;
+}
+
 .bg-mainDarkTheme {
   --tw-bg-opacity: 1;
   background-color: rgb(9 9 9 / var(--tw-bg-opacity));
