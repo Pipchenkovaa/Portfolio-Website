@@ -1,6 +1,5 @@
-import { DivBlock, LinkBlock, ImageBlock, TextBlock, SectionBlock } from "./readyBlocks.js"
+import { DivBlock, LinkBlock, ImageBlock, TextBlock, SectionBlock } from "./classes.js"
 
-//GitHub button with link
 const GithubIcon = new ImageBlock(
 	"./images/icons/github.svg",
 	"Github Icon",
@@ -20,7 +19,6 @@ const GithubAccountLink = new LinkBlock(
 	GithubIcon + GithubButtonText
 ).toHtml()
 
-//Telegram button with link
 const tgIconHeader = new ImageBlock(
 	"./images/icons/telegram-icon.svg",
 	"Telegram Icon",
@@ -34,7 +32,6 @@ const tgLinkHeader = new LinkBlock(
 	tgIconHeader
 ).toHtml()
 
-//Email button with link
 const mailIconHeader = new ImageBlock(
 	"./images/icons/email.svg",
 	"Email Icon",
@@ -48,14 +45,12 @@ const mailLinkHeader = new LinkBlock(
 	mailIconHeader
 ).toHtml()
 
-//Wrapper for contart buttons & links
 const linksDivWrapper = new DivBlock(
 	"welcome-info__socials",
 	GithubAccountLink + tgLinkHeader + mailLinkHeader,
 	undefined
 ).toHtml()
 
-//Just paragraph
 const descriptionAdditionalText = new TextBlock(
 	"p",
 	"welcome-info__additional-text body-text-color",
@@ -68,21 +63,18 @@ const spanProgrammingBlock = new TextBlock(
 	"programming"
 ).toHtml()
 
-//Main itroduction text
 const descriptionMainText = new TextBlock(
 	"h1",
 	"welcome-info__main-text headers-text-color",
 	`Hi there! My name's Alina and, above all else, I love ${spanProgrammingBlock}`
 ).toHtml()
 
-//Full card with itroduction information
 const informationCard = new DivBlock(
 	"card welcome-info card-decor",
 	linksDivWrapper + descriptionMainText + descriptionAdditionalText,
 	undefined
 ).toHtml()
 
-//Avatar card
 const avatsrImg = new ImageBlock(
 	"./images/avatar.png",
 	"Alina's avatar",
@@ -95,7 +87,6 @@ const avatarCard = new DivBlock(
 	avatsrImg
 ).toHtml()
 
-//Full header block with avatar card & texts & contacts
 export const headerSection = new SectionBlock(
 	"introduction",
 	informationCard + avatarCard
