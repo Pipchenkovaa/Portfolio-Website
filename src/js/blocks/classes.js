@@ -4,7 +4,7 @@ class ParentBlock {
 		this.content = content
 	}
 	toHtml() {
-		throw new Error('The toHtml method must be implemented!')
+		throw new Error("The toHtml method must be implemented!")
 	}
 }
 
@@ -35,7 +35,7 @@ export class DivBlock extends ParentBlock {
 			`
 		} else {
 			return `
-				<div class="${this.className} id="${this.id}"">
+				<div class="${this.className}" id="${this.id}">
 					${this.content}
 				</div>
 			`

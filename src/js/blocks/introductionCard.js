@@ -4,7 +4,7 @@ const GithubIcon = new ImageBlock(
 	"./images/icons/github.svg",
 	"Github Icon",
 	"github-contact",
-	"30px"
+	30
 ).toHtml()
 
 const GithubButtonText = new TextBlock(
@@ -23,7 +23,7 @@ const tgIconHeader = new ImageBlock(
 	"./images/icons/telegram-icon.svg",
 	"Telegram Icon",
 	"telegram-contact social-link button-link-decor",
-	"46px"
+	46
 ).toHtml()
 
 const tgLinkHeader = new LinkBlock(
@@ -36,7 +36,7 @@ const mailIconHeader = new ImageBlock(
 	"./images/icons/email.svg",
 	"Email Icon",
 	"social-link button-link-decor",
-	"46px"
+	46
 ).toHtml()
 
 const mailLinkHeader = new LinkBlock(
