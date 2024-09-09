@@ -41,10 +41,10 @@ const steckLogosList = [
 ]
 
 steckLogosList.forEach(
-	currentElem => {
+	elem => {
 		const image = document.createElement("img")
-		image.src = currentElem.src
-		image.alt = currentElem.alt
+		image.src = elem.src
+		image.alt = elem.alt
 		image.className = "marquee__item stack-logo"
 		steckWrapper.append(image)
 	}
