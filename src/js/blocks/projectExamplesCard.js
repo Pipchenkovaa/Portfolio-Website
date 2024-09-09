@@ -34,7 +34,7 @@ const projectsResources = [
 	},
 	{
 		projectName: "Apple / Mac Website",
-		href: "https://pipchenkovaa.github.io/Authorization-Form/",
+		href: "https://pipchenkovaa.github.io/Apple_Mac-Website/",
 		projectImageSrc: "./images/apple-site.png",
 		projectImageAlt: "Apple Mac Website",
 		imageCardClass: "project-example light-card",
