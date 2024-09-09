@@ -26,23 +26,25 @@ const socialMediaIcons = [
 const iconsWrapper = document.createElement("div")
 iconsWrapper.className = "connection-icons"
 
-socialMediaIcons.forEach(elem => {
-	const iconDiv = document.createElement("div")
-	iconDiv.className = "icon"
+socialMediaIcons.forEach(
+	elem => {
+		const iconDiv = document.createElement("div")
+		iconDiv.className = "icon"
 
-	const link = document.createElement("a")
-	link.href = elem.href
+		const link = document.createElement("a")
+		link.href = elem.href
 
-	const iconImage = document.createElement("img")
-	iconImage.src = elem.src
-	iconImage.alt = elem.alt
-	iconImage.className = "icon__space button-link-decor"
-	iconImage.width = 45
+		const iconImage = document.createElement("img")
+		iconImage.src = elem.src
+		iconImage.alt = elem.alt
+		iconImage.className = "icon__space button-link-decor"
+		iconImage.width = 45
 
-	link.append(iconImage)
-	iconDiv.append(link)
-	iconsWrapper.append(iconDiv)
-})
+		link.append(iconImage)
+		iconDiv.append(link)
+		iconsWrapper.append(iconDiv)
+	}
+)
 
 const connectionConditions = new TextBlock(
 	"p",
