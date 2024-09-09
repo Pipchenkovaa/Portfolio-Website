@@ -1,5 +1,3 @@
-import { DivBlock, LinkBlock, ImageBlock, TextBlock, SectionBlock } from "./classes.js"
-
 const projectWrapper = document.createElement("div")
 projectWrapper.className = "project-card card-decor"
 
@@ -12,11 +10,11 @@ const projectsResources = [
 		imageCardClass: "project-example dark-card",
 		projectDescription: "The stunning design of the two-page authorization form is suitable for both new & registered users",
 		usedTechnologies: [
-			{imageIcon: "./images/icons/scss.svg", imageAlt: "SCSS Logo"},
-			{imageIcon: "./images/icons/html.svg", imageAlt: "HTML Logo"},
-			{imageIcon: "./images/icons/css.svg", imageAlt: "CSS Logo"},
-			{imageIcon: "./images/icons/js.svg", imageAlt: "JS Logo"},
-			{imageIcon: "./images/icons/git.svg", imageAlt: "GIT Logo"},
+			{imageIcon: "./images/icons/scss.svg", imageAlt: "SCSS Logo", hiddenClass: false},
+			{imageIcon: "./images/icons/html.svg", imageAlt: "HTML Logo", hiddenClass: false},
+			{imageIcon: "./images/icons/css.svg", imageAlt: "CSS Logo", hiddenClass: true},
+			{imageIcon: "./images/icons/js.svg", imageAlt: "JS Logo", hiddenClass: false},
+			{imageIcon: "./images/icons/git.svg", imageAlt: "GIT Logo", hiddenClass: false},
 		]
 	},
 	{
@@ -27,11 +25,11 @@ const projectsResources = [
 		imageCardClass: "project-example dark-card",
 		projectDescription: "A simple website with a parallax effect, created primarily using JavaScript & Adobe Photoshop",
 		usedTechnologies: [
-			{imageIcon: "./images/icons/scss.svg", imageAlt: "SCSS Logo"},
-			{imageIcon: "./images/icons/html.svg", imageAlt: "HTML Logo"},
-			{imageIcon: "./images/icons/css.svg", imageAlt: "CSS Logo"},
-			{imageIcon: "./images/icons/js.svg", imageAlt: "JS Logo"},
-			{imageIcon: "./images/icons/photoshop.svg", imageAlt: "Photoshop Logo"},
+			{imageIcon: "./images/icons/scss.svg", imageAlt: "SCSS Logo", hiddenClass: false},
+			{imageIcon: "./images/icons/html.svg", imageAlt: "HTML Logo", hiddenClass: false},
+			{imageIcon: "./images/icons/css.svg", imageAlt: "CSS Logo", hiddenClass: false},
+			{imageIcon: "./images/icons/js.svg", imageAlt: "JS Logo", hiddenClass: false},
+			{imageIcon: "./images/icons/photoshop.svg", imageAlt: "Photoshop Logo", hiddenClass: true},
 		]
 	},
 	{
@@ -42,10 +40,10 @@ const projectsResources = [
 		imageCardClass: "project-example light-card",
 		projectDescription: "An updated, multi-page website that is inspired by the iconic style of Apple Inc. The first major project of it's kind",
 		usedTechnologies: [
-			{imageIcon: "./images/icons/html.svg", imageAlt: "HTML Logo"},
-			{imageIcon: "./images/icons/css.svg", imageAlt: "CSS Logo"},
-			{imageIcon: "./images/icons/js.svg", imageAlt: "JS Logo"},
-			{imageIcon: "./images/icons/photoshop.svg", imageAlt: "Photoshop Logo"},
+			{imageIcon: "./images/icons/html.svg", imageAlt: "HTML Logo", hiddenClass: false},
+			{imageIcon: "./images/icons/css.svg", imageAlt: "CSS Logo", hiddenClass: false},
+			{imageIcon: "./images/icons/js.svg", imageAlt: "JS Logo", hiddenClass: false},
+			{imageIcon: "./images/icons/photoshop.svg", imageAlt: "Photoshop Logo", hiddenClass: false},
 		]
 	},
 	{
@@ -56,19 +54,17 @@ const projectsResources = [
 		imageCardClass: "project-example light-card",
 		projectDescription: "A minimalist fashion news website, where I first used the Tailwind CSS framework",
 		usedTechnologies: [
-			{imageIcon: "./images/icons/tailwind.svg", imageAlt: "Tailwindcss Logo"},
-			{imageIcon: "./images/icons/html.svg", imageAlt: "HTML Logo"},
-			{imageIcon: "./images/icons/css.svg", imageAlt: "CSS Logo"},
-			{imageIcon: "./images/icons/js.svg", imageAlt: "JS Logo"},
+			{imageIcon: "./images/icons/tailwind.svg", imageAlt: "Tailwindcss Logo", hiddenClass: false},
+			{imageIcon: "./images/icons/html.svg", imageAlt: "HTML Logo", hiddenClass: false},
+			{imageIcon: "./images/icons/css.svg", imageAlt: "CSS Logo", hiddenClass: false},
+			{imageIcon: "./images/icons/js.svg", imageAlt: "JS Logo", hiddenClass: false},
 		]
 	}
 ]
 
-const projectsSectionTitle = new TextBlock(
-	"h4",
-	"body-text-color",
-	"Some examples of my work"
-).toHtml()
+const projectsSectionTitle = document.createElement("h4")
+projectsSectionTitle.className = "body-text-color"
+projectsSectionTitle.textContent = "Some examples of my work"
 
 export const projectCardSection = document.createElement("section")
 projectCardSection.className = "pet-projects"
@@ -114,6 +110,10 @@ projectsResources.forEach(
 				const usedTechItem = document.createElement("li")
 				usedTechItem.className = "used-technologies__list__wrapper border-common"
 
+				if (tech.hiddenClass) {
+					usedTechItem.classList.add("hidden-one")
+				}
+
 				const techIcon = document.createElement("img")
 				techIcon.src = tech.imageIcon
 				techIcon.alt = tech.imageAlt
@@ -138,14 +138,3 @@ projectsResources.forEach(
 
 		projectCardSection.append(projectCardWrapper)
 })
-
-// const projectsSectionTitle = new TextBlock(
-// 	"h4",
-// 	"body-text-color",
-// 	"Some examples of my work"
-// ).toHtml()
-
-// export const projectCardSection = new SectionBlock(
-// 	"pet-projects",
-// 	projectsSectionTitle + projectCardWrapper.outerHTML
-// ).toHtml()
