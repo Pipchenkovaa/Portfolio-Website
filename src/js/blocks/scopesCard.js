@@ -1,91 +1,105 @@
-import { DivBlock, LinkBlock, ImageBlock, TextBlock, SectionBlock } from "./classes.js"
+import { createBlockElement, createDivElement, createLinkElement, createImageElement } from "./functions.js"
 
-const headingFirstService = new TextBlock(
+const headingFirstService = createBlockElement(
 	"h5",
-	"headers-text-color",
-	"&#10022; Layout Design Development"
-).toHtml()
+	"headers-text-color"
+)
+headingFirstService.innerHTML = "&#10022;  Layout Design Development"
 
-const paragraphFirstService = new TextBlock(
+const paragraphFirstService = createBlockElement(
 	"p",
 	"body-text-color",
+	null,
 	"I'll design an exquisite website based on your existing ready-made layout, with a focus on styles"
-).toHtml()
+)
 
-const firstServiceBlock = new DivBlock(
+const firstServiceBlock = createDivElement(
 	"first-service border-right",
-	headingFirstService + paragraphFirstService,
-	"layout"
-).toHtml()
+	"layout",
+	headingFirstService,
+	paragraphFirstService
+)
 
-const headingSecondService = new TextBlock(
+const headingSecondService = createBlockElement(
 	"h5",
-	"headers-text-color",
-	"&#10022; Frontend Development"
-).toHtml()
+	"headers-text-color"
+)
+headingSecondService.innerHTML = "&#10022;  Frontend Development"
 
-const paragraphSecondService = new TextBlock(
+const paragraphSecondService = createBlockElement(
 	"p",
 	"body-text-color",
+	null,
 	"I'll create a fully responsive & unique website that focuses on JavaScript development"
-).toHtml()
+)
 
-const secondServiceBlock = new DivBlock(
+const secondServiceBlock = createDivElement(
 	"second-service",
-	headingSecondService + paragraphSecondService,
-	"frontend"
-).toHtml()
+	"frontend",
+	headingSecondService,
+	paragraphSecondService
+)
 
-const servicesWrapper = new DivBlock(
+const servicesWrapper = createDivElement(
 	"proposed-services",
-	firstServiceBlock + secondServiceBlock,
-	undefined
-).toHtml()
+	null,
+	firstServiceBlock,
+	secondServiceBlock
+)
 
-const githubButtonText = new TextBlock(
+const githubButtonText = createBlockElement(
 	"p",
-	undefined,
+	null,
+	null,
 	"View GitHub"
-).toHtml()
+)
 
-const arrowIcon = new ImageBlock(
+const arrowIcon = createImageElement(
 	"./images/icons/arrow.svg",
 	"Arrow Icon",
 	"arrow",
-	35,
-).toHtml()
+	35
+)
 
-const githubLinkButton = new LinkBlock(
+const githubLinkButton = createLinkElement(
 	"https://github.com/Pipchenkovaa",
 	"connection headers-text-color button-link-decor",
-	githubButtonText + arrowIcon
-).toHtml()
+	githubButtonText,
+	arrowIcon
+)
 
-const buttonContactWrapper = new DivBlock(
+const buttonContactWrapper = createDivElement(
 	"intrest-form-content__register",
-	githubLinkButton,
-	undefined
-).toHtml()
+	null,
+	githubLinkButton
+)
 
-const spanInterestBlock = new TextBlock(
+const spanInterestBlock = createBlockElement(
 	"span",
 	"intrest-form-content__highlighting headers-text-color",
+	null,
 	"Interested?"
-).toHtml()
+)
 
-const headingContsctCard = new TextBlock(
+const headingContsctCard = createBlockElement(
 	"h1",
 	"headers-text-color",
-	`Did You Become ${spanInterestBlock}`
-).toHtml()
+	null,
+	"Did You Become ",
+	spanInterestBlock
+)
 
-const interestCardWrapper = new DivBlock(
+const interestCardWrapper = createDivElement(
 	"card intrest-form-content card-decor",
-	headingContsctCard + servicesWrapper + buttonContactWrapper,
-	undefined
-).toHtml()
+	null,
+	headingContsctCard,
+	servicesWrapper,
+	buttonContactWrapper
+)
 
-export const scopesSection = new SectionBlock(
+export const scopesSection = createBlockElement(
+	"section",
 	"services",
+	null,
 	interestCardWrapper
-).toHtml()
+)

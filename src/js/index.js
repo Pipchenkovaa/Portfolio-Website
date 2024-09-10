@@ -1,22 +1,7 @@
-import { headerSection } from "./blocks/introductionCard.js"
-import { tickerSection } from "./blocks/techStackCard.js"
-import { projectCardSection } from "./blocks/projectExamplesCard.js"
-import { scopesSection } from "./blocks/scopesCard.js"
-import { contactsSection } from "./blocks/contactsCard.js"
-import { rightsSection } from "./blocks/rightsCard.js"
+import { createDivElement } from "./blocks/functions.js"
+import { sections } from "./utils.js"
 
-const sections = [
-	headerSection.outerHTML,
-	tickerSection.outerHTML,
-	projectCardSection.outerHTML,
-	scopesSection,
-	contactsSection.outerHTML,
-	rightsSection.outerHTML
-]
-
-const mainContainer = document.createElement("div")
-mainContainer.className = "container"
-mainContainer.id = "app"
+const mainContainer = createDivElement("container", "app")
 document.body.append(mainContainer)
 
 sections.forEach(
