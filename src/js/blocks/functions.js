@@ -45,16 +45,16 @@ export const createLinkElement = (href, className, ...content) => {
 }
 
 export const createImageElement = (src, alt, className, width) => {
-	const elem = document.createElement("img")
-	elem.src = src
-	elem.alt = alt
+	const image = document.createElement("img")
+	image.src = src
+	image.alt = alt
 	if (className) {
-		elem.className = className
+		image.className = className
 	}
 	if (width) {
-		elem.width = width
+		image.width = width
 	}
-	return elem
+	return image
 }
 
 export const createTechStackList = (usedTechnologies) => {

@@ -1,18 +1,21 @@
-import { SectionBlock, DivBlock, TextBlock } from "./classes.js";
+import { createBlockElement, createDivElement } from "./functions.js"
 
-const initials = new TextBlock(
+const initials = createBlockElement(
 	"p",
-	undefined,
+	null,
+	null,
 	"© Pipchencova Alina, 2024"
-).toHtml()
+)
 
-const rightsWrapper = new DivBlock(
+const rightsWrapper = createDivElement(
 	"copy-rights body-text-color",
-	initials,
-	undefined
-).toHtml()
+	null,
+	initials
+)
 
-export const rightsSection = new SectionBlock(
+export const rightsSection = createBlockElement(
+	"section",
 	"rights",
+	null,
 	rightsWrapper
-).toHtml()
+)

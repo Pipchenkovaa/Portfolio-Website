@@ -139,6 +139,7 @@ const projectsSectionTitle = createBlockElement(
 	null,
 	"Some examples of my work"
 )
+
 export const projectCardSection = createBlockElement(
 	"section",
 	"pet-projects",

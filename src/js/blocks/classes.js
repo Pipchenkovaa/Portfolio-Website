@@ -27,15 +27,15 @@ export class DivBlock extends ParentBlock {
 		this.id = id
 	}
 	toHtml() {
-		if (this.id === undefined) {
+		if (this.id) {
 			return `
-				<div class="${this.className}">
+				<div class="${this.className}" id="${this.id}">
 					${this.content}
 				</div>
 			`
 		} else {
 			return `
-				<div class="${this.className}" id="${this.id}">
+				<div class="${this.className}">
 					${this.content}
 				</div>
 			`
@@ -51,11 +51,11 @@ export class ImageBlock extends ParentBlock {
 		this.width = width
 	}
 	toHtml() {
-		if (this.className === undefined) {
+		if (this.className === null) {
 			return `
 				<img src="${this.src}" alt="${this.alt}" width="${this.width}">
 			`
-		} else if (this.width === undefined) {
+		} else if (this.width === null) {
 			return `
 				<img src="${this.src}" alt="${this.alt}" class="${this.className}">
 			`
@@ -73,15 +73,15 @@ export class LinkBlock extends ParentBlock {
 		this.href = href
 	}
 	toHtml() {
-		if (this.className === undefined) {
+		if (this.className) {
 			return `
-				<a href="${this.href}">
+				<a href="${this.href}" class="${this.className}">
 					${this.content}
 				</a>
 			`
 		} else {
 			return `
-				<a href="${this.href}" class="${this.className}">
+				<a href="${this.href}">
 					${this.content}
 				</a>
 			`
@@ -96,15 +96,15 @@ export class TextBlock {
 		this.tag = tag
 	}
 	toHtml() {
-		if (this.className === undefined) {
+		if (this.className) {
 			return `
-				<${this.tag}>
+				<${this.tag} class="${this.className}">
 					${this.content}
 				</${this.tag}>
 			`
 		} else {
 			return `
-				<${this.tag} class="${this.className}">
+				<${this.tag}>
 					${this.content}
 				</${this.tag}>
 			`

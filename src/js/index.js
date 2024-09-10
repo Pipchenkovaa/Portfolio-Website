@@ -10,8 +10,8 @@ const sections = [
 	tickerSection.outerHTML,
 	projectCardSection.outerHTML,
 	scopesSection,
-	contactsSection,
-	rightsSection
+	contactsSection.outerHTML,
+	rightsSection.outerHTML
 ]
 
 const mainContainer = document.createElement("div")

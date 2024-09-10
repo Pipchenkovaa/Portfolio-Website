@@ -1,4 +1,4 @@
-import { DivBlock, TextBlock, SectionBlock } from "./classes.js"
+import { createBlockElement, createDivElement, createLinkElement, createImageElement } from "./functions.js"
 
 const socialMediaIcons = [
 	{
@@ -23,53 +23,64 @@ const socialMediaIcons = [
 	},
 ]
 
-const iconsWrapper = document.createElement("div")
-iconsWrapper.className = "connection-icons"
+const iconsWrapper = createDivElement(
+	"connection-icons"
+)
 
 socialMediaIcons.forEach(
 	elem => {
-		const iconDiv = document.createElement("div")
-		iconDiv.className = "icon"
-
-		const link = document.createElement("a")
-		link.href = elem.href
-
-		const iconImage = document.createElement("img")
-		iconImage.src = elem.src
-		iconImage.alt = elem.alt
-		iconImage.className = "icon__space button-link-decor"
-		iconImage.width = 45
-
-		link.append(iconImage)
-		iconDiv.append(link)
+		const iconImage = createImageElement(
+			elem.src,
+			elem.alt,
+			"icon__space button-link-decor",
+			45
+		)
+		const link = createLinkElement(
+			elem.href,
+			null,
+			iconImage
+		)
+		const iconDiv = createDivElement(
+			"icon",
+			null,
+			link
+		)
 		iconsWrapper.append(iconDiv)
 	}
 )
 
-const connectionConditions = new TextBlock(
+const connectionConditions = createBlockElement(
 	"p",
-	"body-text-color",
-	"Available Hours: 9:00 AM – 9:00 PM <br> (Moscow Time)"
-).toHtml()
+	"body-text-color"
+)
+connectionConditions.innerHTML = "Available Hours: 9:00 AM – 9:00 PM <br> (Moscow Time)"
 
-const spanContactConditions = new TextBlock(
+const spanContactConditions = createBlockElement(
 	"span",
 	"stay-connected__highlighting headers-text-color",
+	null,
 	"Connected"
-).toHtml()
+)
 
-const connectionHeader = new TextBlock(
+const connectionHeader = createBlockElement(
 	"h1",
 	"headers-text-color",
-	`Stay ${spanContactConditions}`
-).toHtml()
+	null,
+	"Stay ",
+	spanContactConditions
+)
 
-const connectionMainWrapper = new DivBlock(
+const connectionMainWrapper = createDivElement(
 	"stay-connected",
-	connectionHeader + connectionConditions + iconsWrapper.outerHTML
-).toHtml()
+	null,
+	connectionHeader,
+	connectionConditions,
+	iconsWrapper
+)
 
-export const contactsSection = new SectionBlock(
+export const contactsSection = createBlockElement(
+	"section",
 	"footer",
+	null,
 	connectionMainWrapper
-).toHtml()
+)
