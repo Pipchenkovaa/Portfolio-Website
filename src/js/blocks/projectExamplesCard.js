@@ -62,9 +62,74 @@ const projectsResources = [
 	}
 ]
 
-const projectsSectionTitle = document.createElement("h4")
-projectsSectionTitle.className = "body-text-color"
-projectsSectionTitle.textContent = "Some examples of my work"
+const createTextElement = (tag, className, content) => {
+	const elem = document.createElement(tag)
+	if (className) {
+		elem.className = className
+	}
+	if (content) {
+		elem.textContent = content
+	}
+	return elem
+}
+
+const createImageElement = (src, alt, className, width) => {
+	const elem = document.createElement("img")
+	elem.src = src
+	elem.alt = alt
+	if (className) {
+		elem.className = className
+	}
+	if (width) {
+		elem.width = width
+	}
+	return elem
+}
+
+const createLinkElement = (href, className, content) => {
+	const link = document.createElement("a")
+	link.href = href
+	if (className) {
+		link.className = className
+	}
+	link.append(content)
+	return link
+}
+
+const createDivElement = (className, id, ...content) => {
+	const div = document.createElement("div")
+	div.className = className
+	if (id) {
+		div.id = id
+	}
+	content.forEach(
+		item => {
+			div.append(item)
+		}
+	)
+	return div
+}
+
+const createTechStackList = (usedTechnologies) => {
+	const techList = document.createElement("ul")
+	techList.className = "used-technologies__list"
+
+	usedTechnologies.forEach(
+		elem => {
+			const techItem = document.createElement("li")
+			techItem.className = "used-technologies__list__wrapper border-common"
+			if (elem.hiddenClass) {
+				techItem.classList.add("hidden-one")
+			}
+			const techImage = createImageElement(elem.imageIcon, elem.imageAlt, null, 30)
+			techItem.append(techImage)
+			techList.append(techItem)
+		}
+	)
+	return techList
+}
+
+const projectsSectionTitle = createTextElement("h4", "body-text-color", "Some examples of my work")
 
 export const projectCardSection = document.createElement("section")
 projectCardSection.className = "pet-projects"
@@ -72,69 +137,26 @@ projectCardSection.append(projectsSectionTitle)
 
 projectsResources.forEach(
 	elem => {
-		const projectImg = document.createElement("img")
-		projectImg.src = elem.projectImageSrc
-		projectImg.alt = elem.projectImageAlt
-		projectImg.className = elem.imageCardClass
-		projectImg.width = 800
+		const projectImg = createImageElement(elem.projectImageSrc, elem.projectImageAlt, elem.imageCardClass, 800)
 
-		const projectImageLink = document.createElement("a")
-		projectImageLink.href = elem.href
-		projectImageLink.append(projectImg)
+		const projectImageLink = createLinkElement(elem.href, null, projectImg)
 
-		const projectImageWrapper = document.createElement("div")
-		projectImageWrapper.className = "image-cover"
-		projectImageWrapper.append(projectImageLink)
+		const projectImageWrapper = createDivElement("image-cover", null, projectImageLink)
 
-		const projectTitle = document.createElement("h5")
-		projectTitle.className = "project-name headers-text-color headers-link"
-		projectTitle.textContent = elem.projectName
+		const projectTitle = createTextElement("h5", "project-name headers-text-color headers-link", elem.projectName)
+
+		const projectTitleLink = createLinkElement(elem.href, null, projectTitle)
+
+		const projectDescriptionCover = createDivElement("project-descrtiption_cover", null, projectTitleLink)
+
+		const projectText = createTextElement("p", "add-project-info body-text-color", elem.projectDescription)
+
+		const techStackListWrapper = createDivElement("used-technologies hidden-mobile-small", null, createTechStackList(elem.usedTechnologies))
 		
-		const projectTitleLink = document.createElement("a")
-		projectTitleLink.href = elem.href
-		projectTitleLink.append(projectTitle)
-		
-		const projectDescriptionCover = document.createElement("div")
-		projectDescriptionCover.className = "project-descrtiption_cover"
-		projectDescriptionCover.append(projectTitleLink)
+		const projectDescriptionWrapper = createDivElement("project-description", null, projectDescriptionCover, projectText, techStackListWrapper)
 
-		const projectText = document.createElement("p")
-		projectText.className = "add-project-info body-text-color"
-		projectText.textContent = elem.projectDescription
-		
-		const techStackList = document.createElement("ul")
-		techStackList.className = "used-technologies__list"
-
-		elem.usedTechnologies.forEach(
-			tech => {
-				const usedTechItem = document.createElement("li")
-				usedTechItem.className = "used-technologies__list__wrapper border-common"
-
-				if (tech.hiddenClass) {
-					usedTechItem.classList.add("hidden-one")
-				}
-
-				const techIcon = document.createElement("img")
-				techIcon.src = tech.imageIcon
-				techIcon.alt = tech.imageAlt
-				techIcon.width = 30
-
-				usedTechItem.append(techIcon)
-				techStackList.append(usedTechItem)
-			}
-		)
-
-		const techStackListWrapper = document.createElement("div")
-		techStackListWrapper.className = "used-technologies hidden-mobile-small"
-		techStackListWrapper.append(techStackList)
-
-		const projectDescriptionWrapper = document.createElement("div")
-		projectDescriptionWrapper.className = "project-description"
-		projectDescriptionWrapper.append(projectDescriptionCover, projectText, techStackListWrapper)
-
-		const projectCardWrapper = document.createElement("div")
-		projectCardWrapper.className = "project-card card-decor"
-		projectCardWrapper.append(projectImageWrapper, projectDescriptionWrapper)
+		const projectCardWrapper = createDivElement("project-card card-decor", null, projectImageWrapper, projectDescriptionWrapper)
 
 		projectCardSection.append(projectCardWrapper)
-})
+	}
+)
