@@ -143,8 +143,6 @@ const projectsSectionTitle = createBlockElement(
 export const projectCardSection = createBlockElement(
 	"section",
 	"pet-projects",
-	null,
-	null
 )
 projectCardSection.append(projectsSectionTitle)
 

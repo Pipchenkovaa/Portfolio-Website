@@ -98,8 +98,7 @@ headerCard.forEach(
 		const avatsrImg = createImageElement(
 			elem.avatarImage,
 			elem.avatarImageAlt,
-			"avatar__image",
-			null
+			"avatar__image"
 		)
 		const avatarCard = createDivElement(
 			"card avatar background-gradient border-common",
