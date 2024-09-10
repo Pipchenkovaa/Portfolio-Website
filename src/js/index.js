@@ -6,8 +6,8 @@ import { contactsSection } from "./blocks/contactsCard.js"
 import { rightsSection } from "./blocks/rightsCard.js"
 
 const sections = [
-	headerSection,
-	tickerSection,
+	headerSection.outerHTML,
+	tickerSection.outerHTML,
 	projectCardSection.outerHTML,
 	scopesSection,
 	contactsSection,

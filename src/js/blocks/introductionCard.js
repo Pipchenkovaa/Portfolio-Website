@@ -1,93 +1,111 @@
-import { DivBlock, LinkBlock, ImageBlock, TextBlock, SectionBlock } from "./classes.js"
+import { createBlockElement, createDivElement, createLinkElement, createImageElement } from "./functions.js"
 
-const GithubIcon = new ImageBlock(
-	"./images/icons/github.svg",
-	"Github Icon",
-	"github-contact",
-	30
-).toHtml()
+const headerCard = [
+	{
+		githubLink: "https://github.com/PlPchenkova",
+		githubIcon: "./images/icons/github.svg",
+		githubIconAlt: "Github Icon",
+		telegramLink: "https://t.me/@pip_ch",
+		telegramIcon: "./images/icons/telegram-icon.svg",
+		telegramIconAlt: "Telegram Icon",
+		emailLink: "mailto:pipchenkova0701@gmail.com",
+		emailIcon: "./images/icons/email.svg",
+		emailIconAlt: "Email Icon",
+		avatarImage: "./images/avatar.png",
+		avatarImageAlt: "Alina's avatar",
+		heading: "Hi there! My name's Alina and, above all else, I love ",
+		text: "I'm currently studying at the HSE University, and my goal is to become a frontend developer and create modern, efficient web interfaces"
+	}
+]
 
-const GithubButtonText = new TextBlock(
-	"p",
-	undefined,
-	"View GitHub"
-).toHtml()
+export const headerSection = createBlockElement("section", "introduction")
 
-const GithubAccountLink = new LinkBlock(
-	"https://github.com/Pipchenkovaa",
-	"welcome-info__socials connection headers-text-color button-link-decor",
-	GithubIcon + GithubButtonText
-).toHtml()
-
-const tgIconHeader = new ImageBlock(
-	"./images/icons/telegram-icon.svg",
-	"Telegram Icon",
-	"telegram-contact social-link button-link-decor",
-	46
-).toHtml()
-
-const tgLinkHeader = new LinkBlock(
-	"https://t.me/@pip_ch",
-	"welcome-info__socials",
-	tgIconHeader
-).toHtml()
-
-const mailIconHeader = new ImageBlock(
-	"./images/icons/email.svg",
-	"Email Icon",
-	"social-link button-link-decor",
-	46
-).toHtml()
-
-const mailLinkHeader = new LinkBlock(
-	"mailto:pipchenkova0701@gmail.com",
-	"welcome-info__socials",
-	mailIconHeader
-).toHtml()
-
-const linksDivWrapper = new DivBlock(
-	"welcome-info__socials",
-	GithubAccountLink + tgLinkHeader + mailLinkHeader,
-	undefined
-).toHtml()
-
-const descriptionAdditionalText = new TextBlock(
-	"p",
-	"welcome-info__additional-text body-text-color",
-	"I'm currently studying at the HSE University, and my goal is to become a frontend developer and create modern, efficient web interfaces"
-).toHtml()
-
-const spanProgrammingBlock = new TextBlock(
-	"span",
-	"welcome-info__main-text__highlighting headers-text-color",
-	"programming"
-).toHtml()
-
-const descriptionMainText = new TextBlock(
-	"h1",
-	"welcome-info__main-text headers-text-color",
-	`Hi there! My name's Alina and, above all else, I love ${spanProgrammingBlock}`
-).toHtml()
-
-const informationCard = new DivBlock(
-	"card welcome-info card-decor",
-	linksDivWrapper + descriptionMainText + descriptionAdditionalText,
-	undefined
-).toHtml()
-
-const avatsrImg = new ImageBlock(
-	"./images/avatar.png",
-	"Alina's avatar",
-	"avatar__image",
-	undefined
-).toHtml()
-
-const avatarCard = new DivBlock(
-	"card avatar background-gradient border-common",
-	avatsrImg
-).toHtml()
-
-export const headerSection = new SectionBlock(
-	"introduction",
-	informationCard + avatarCard
-).toHtml()
+headerCard.forEach(
+	elem => {
+		const GithubIcon = createImageElement(
+			elem.githubIcon,
+			elem.githubIconAlt,
+			"github-contact",
+			30
+		)
+		const GithubButtonText = createBlockElement(
+			"p",
+			null,
+			null,
+			"View GitHub"
+		)
+		const GithubAccountLink = createLinkElement(
+			elem.githubLink,
+			"welcome-info__socials connection headers-text-color button-link-decor",
+			GithubIcon,
+			GithubButtonText
+		)
+		const telegramIconHeader = createImageElement(
+			elem.telegramIcon,
+			elem.telegramIconAlt,
+			"telegram-contact social-link button-link-decor",
+			46
+		)
+		const telegramLinkHeader = createLinkElement(
+			elem.telegramLink,
+			"welcome-info__socials",
+			telegramIconHeader
+		)
+		const emailIconHeader = createImageElement(
+			elem.emailIcon,
+			elem.emailIconAlt,
+			"social-link button-link-decor",
+			46
+		)
+		const emailLinkHeader = createLinkElement(
+			elem.emailLink,
+			"welcome-info__socials",
+			emailIconHeader
+		)
+		const linksDivWrapper = createDivElement(
+			"welcome-info__socials",
+			null,
+			GithubAccountLink,
+			telegramLinkHeader,
+			emailLinkHeader
+		)
+		const descriptionAdditionalText = createBlockElement(
+			"p",
+			"welcome-info__additional-text body-text-color",
+			null,
+			elem.text
+		)
+		const spanProgrammingBlock = createBlockElement(
+			"span",
+			"welcome-info__main-text__highlighting headers-text-color",
+			null,
+			"programming"
+		)
+		const descriptionMainText = createBlockElement(
+			"h1",
+			"welcome-info__main-text headers-text-color",
+			null,
+			elem.heading,
+			spanProgrammingBlock
+		)
+		const informationCard = createDivElement(
+			"card welcome-info card-decor",
+			null,
+			linksDivWrapper,
+			descriptionMainText,
+			descriptionAdditionalText
+		)
+		const avatsrImg = createImageElement(
+			elem.avatarImage,
+			elem.avatarImageAlt,
+			"avatar__image",
+			null
+		)
+		const avatarCard = createDivElement(
+			"card avatar background-gradient border-common",
+			null,
+			avatsrImg
+		)
+		headerSection.append(informationCard, avatarCard)
+	}
+)

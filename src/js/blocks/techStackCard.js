@@ -1,13 +1,4 @@
-import { TextBlock, SectionBlock } from "./classes.js"
-
-const tickerHeading = new TextBlock(
-	"h4",
-	"body-text-color",
-	"My technology stack"
-).toHtml()
-
-const steckWrapper = document.createElement("div")
-steckWrapper.className = "technology-stack__scrolling-wrapper marquee marquee--7"
+import { createBlockElement, createDivElement, createImageElement } from "./functions.js"
 
 const steckLogosList = [
 	{
@@ -40,17 +31,32 @@ const steckLogosList = [
 	},
 ]
 
+const tickerHeading = createBlockElement(
+	"h4",
+	"body-text-color",
+	null,
+	"My technology stack"
+)
+
+const steckWrapper = createDivElement(
+	"technology-stack__scrolling-wrapper marquee marquee--7"
+)
+
 steckLogosList.forEach(
 	elem => {
-		const image = document.createElement("img")
-		image.src = elem.src
-		image.alt = elem.alt
-		image.className = "marquee__item stack-logo"
+		const image = createImageElement(
+			elem.src,
+			elem.alt,
+			"marquee__item stack-logo"
+		)
 		steckWrapper.append(image)
 	}
 )
 
-export const tickerSection = new SectionBlock(
+export const tickerSection = createBlockElement(
+	"section",
 	"technology-stack",
-	tickerHeading + steckWrapper.outerHTML
-).toHtml()
+	null,
+	tickerHeading,
+	steckWrapper
+)
