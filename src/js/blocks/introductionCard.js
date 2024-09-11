@@ -2,7 +2,7 @@ import { createBlockElement, createDivElement, createLinkElement, createImageEle
 
 const headerCard = [
 	{
-		githubLink: "https://github.com/PlPchenkova",
+		githubLink: "https://github.com/Pipchenkovaa",
 		githubIcon: "./images/icons/github.svg",
 		githubIconAlt: "Github Icon",
 		telegramLink: "https://t.me/@pip_ch",
