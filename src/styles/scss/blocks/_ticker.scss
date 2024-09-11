@@ -15,6 +15,7 @@
 	}
 
 	&__scrolling-wrapper {
+		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -22,7 +23,6 @@
 		margin: 0 auto;
 		height: calc((var(--size-sm) / 3) - 10px);
 		overflow-x: hidden;
-		position: relative;
 		mask-image: linear-gradient(
 			to right,
 			rgba(9, 9, 9, 0),
@@ -68,33 +68,49 @@
 			--marquee-item-offset: max(calc(var(--marquee-item-width-height-sm) * var(--marquee-items)), calc(100% + var(--marquee-item-width-height-sm)));
 		}
 
-		position: absolute;
-		object-fit: contain;
-		inset-inline-start: var(--marquee-item-offset);
-		transform: translateX(-50% + 30);
-		animation: go linear var(--marquee-duration) var(--marquee-delay, 0s) infinite;
-		--marquee-delay: calc(var(--marquee-duration) / var(--marquee-items) * (var(--marquee-items) - var(--marquee-item-index)) * -1);
-		width: calc(var(--marquee-item-width-height-xl) + 10px);
-		height: calc(var(--marquee-item-width-height-xl) + 10px);
+		& {
+			position: absolute;
+			object-fit: contain;
+			inset-inline-start: var(--marquee-item-offset);
+			transform: translateX(-50% + 30);
+			animation: go linear var(--marquee-duration) var(--marquee-delay, 0s) infinite;
+		}
+
+		& {
+			--marquee-delay: calc(var(--marquee-duration) / var(--marquee-items) * (var(--marquee-items) - var(--marquee-item-index)) * -1);
+		}
+		
+		& {
+			width: calc(var(--marquee-item-width-height-xl) + 10px);
+			height: calc(var(--marquee-item-width-height-xl) + 10px);
+		}
 
 		@include desktop {
-			width: var(--marquee-item-width-height-xl);
-			height: var(--marquee-item-width-height-xl);
+			& {
+				width: var(--marquee-item-width-height-xl);
+				height: var(--marquee-item-width-height-xl);
+			}
 		}
 
 		@include tablet {
-			width: var(--marquee-item-width-height-lg);
-			height: var(--marquee-item-width-height-lg);
+			& {
+				width: var(--marquee-item-width-height-lg);
+				height: var(--marquee-item-width-height-lg);
+			}
 		}
 
 		@include mobile {
-			width: var(--marquee-item-width-height-md);
-			height: var(--marquee-item-width-height-md);
+			& {
+				width: var(--marquee-item-width-height-md);
+				height: var(--marquee-item-width-height-md);
+			}
 		}
 		
 		@include mobile-small {
-			width: var(--marquee-item-width-height-sm);
-			height: var(--marquee-item-width-height-sm);
+			& {
+				width: var(--marquee-item-width-height-sm);
+				height: var(--marquee-item-width-height-sm);
+			}
 		}
 	}
 
