@@ -193,6 +193,13 @@
 							box-shadow: none;
 						}
 					}
+
+					#specialDesktop {
+						@include desktop {
+							display: none;
+							box-shadow: none;
+						}
+					}
 				}
 			}
 

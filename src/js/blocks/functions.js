@@ -67,6 +67,9 @@ export const createTechStackList = (usedTechnologies) => {
 			if (elem.hiddenClass) {
 				techItem.classList.add("hidden-one")
 			}
+			if (elem.hiddenId) {
+				techItem.id = "specialDesktop"
+			}
 			const techImage = createImageElement(
 				elem.imageIcon,
 				elem.imageAlt,

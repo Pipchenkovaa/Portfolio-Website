@@ -10,27 +10,32 @@ export const projectsResources = [
 			{
 				imageIcon: "./images/icons/scss.svg",
 				imageAlt: "SCSS Logo",
-				hiddenClass: false
+				hiddenClass: false,
+				hiddenId: false
 			},
 			{
 				imageIcon: "./images/icons/html.svg",
 				imageAlt: "HTML Logo",
-				hiddenClass: false
+				hiddenClass: false,
+				hiddenId: false
 			},
 			{
 				imageIcon: "./images/icons/css.svg",
 				imageAlt: "CSS Logo",
-				hiddenClass: true
+				hiddenClass: true,
+				hiddenId: false
 			},
 			{
 				imageIcon: "./images/icons/js.svg",
 				imageAlt: "JS Logo",
-				hiddenClass: false
+				hiddenClass: false,
+				hiddenId: false
 			},
 			{
 				imageIcon: "./images/icons/git.svg",
 				imageAlt: "GIT Logo",
-				hiddenClass: false
+				hiddenClass: false,
+				hiddenId: false
 			},
 		]
 	},
@@ -45,28 +50,39 @@ export const projectsResources = [
 			{
 				imageIcon: "./images/icons/scss.svg",
 				imageAlt: "SCSS Logo",
-				hiddenClass: false
+				hiddenClass: false,
+				hiddenId: false
 			},
 			{
 				imageIcon: "./images/icons/html.svg",
 				imageAlt: "HTML Logo",
-				hiddenClass: false
+				hiddenClass: false,
+				hiddenId: false
 			},
 			{
 				imageIcon: "./images/icons/css.svg",
 				imageAlt: "CSS Logo",
-				hiddenClass: false
+				hiddenClass: true,
+				hiddenId: false
 			},
 			{
 				imageIcon: "./images/icons/js.svg",
 				imageAlt: "JS Logo",
-				hiddenClass: false
+				hiddenClass: false,
+				hiddenId: false
 			},
 			{
 				imageIcon: "./images/icons/photoshop.svg",
 				imageAlt: "Photoshop Logo",
-				hiddenClass: true
+				hiddenClass: false,
+				hiddenId: false
 			},
+			{
+				imageIcon: "./images/icons/gsap.svg",
+				imageAlt: "GSAP Logo",
+				hiddenClass: false,
+				hiddenId: true
+			}
 		]
 	},
 	{
@@ -80,22 +96,26 @@ export const projectsResources = [
 			{
 				imageIcon: "./images/icons/html.svg",
 				imageAlt: "HTML Logo",
-				hiddenClass: false
+				hiddenClass: false,
+				hiddenId: false
 			},
 			{
 				imageIcon: "./images/icons/css.svg",
 				imageAlt: "CSS Logo",
-				hiddenClass: false
+				hiddenClass: false,
+				hiddenId: false
 			},
 			{
 				imageIcon: "./images/icons/js.svg",
 				imageAlt: "JS Logo",
-				hiddenClass: false
+				hiddenClass: false,
+				hiddenId: false
 			},
 			{
 				imageIcon: "./images/icons/photoshop.svg",
 				imageAlt: "Photoshop Logo",
-				hiddenClass: false
+				hiddenClass: false,
+				hiddenId: false
 			},
 		]
 	},
@@ -110,22 +130,26 @@ export const projectsResources = [
 			{
 				imageIcon: "./images/icons/tailwind.svg",
 				imageAlt: "Tailwindcss Logo",
-				hiddenClass: false
+				hiddenClass: false,
+				hiddenId: false
 			},
 			{
 				imageIcon: "./images/icons/html.svg",
 				imageAlt: "HTML Logo",
-				hiddenClass: false
+				hiddenClass: false,
+				hiddenId: false
 			},
 			{
 				imageIcon: "./images/icons/css.svg",
 				imageAlt: "CSS Logo",
-				hiddenClass: false
+				hiddenClass: false,
+				hiddenId: false
 			},
 			{
 				imageIcon: "./images/icons/js.svg",
 				imageAlt: "JS Logo",
-				hiddenClass: false
+				hiddenClass: false,
+				hiddenId: false
 			},
 		]
 	}
