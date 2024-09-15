@@ -1,7 +1,7 @@
 <h1> Portfolio Website / Сайт-Портфолио </h1>
-This is my personal portfolio website where I showcase my contact details, skills & projects. The website is designed to be a simple yet effective way to display my work and skills in frontend development.
+This is my personal portfolio website where I showcase my skills & projects. The website is designed to be a simple yet effective way to showcase the work done and the quality of skills acquired in the field of frontend development.
 
-<br>Мой личный сайт-портфолио, на котором представлены мои контактные данные, навыки и проекты. Сайт разработан как простой и эффективный способ продемонстрировать проделанную работу, а также приобретенные навыки в области фронтенд разработки.
+<br>Мой личный сайт-портфолио, на котором представлены мои проекты. Сайт разработан как простой и эффективный способ продемонстрировать проделанную работу, а также качество приобретенных навыков в области фронтенд разработки.
 
 <h3> <b> 💡 Features / Особенности </b> </h3>
 <li>The website adapts to different screen sizes for a seamless experience on both desktop and mobile devices / Сайт подстраивается под разные размеры экранов</li>
