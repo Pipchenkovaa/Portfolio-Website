@@ -10,9 +10,9 @@ This is my personal portfolio website where I showcase my contact details, skill
 <li>Features an animated, infinite-scrolling tech stack banner that adjusts to screen sizes / Прокручивающийся список технологий, который подстраивается под размер экрана.</li>
 
 <h3> <b> ⚙️ Structure / Структура </b> </h3>
-<li><b>«dist/»</b> contains the compiled, optimized output for production / содержит скомпилированную и оптимизированную версию проекта</li>
-<li><b>«fonts/»</b> contains custom fonts used for typography / содержит кастомные шрифты</li>
-<li><b>«images/»</b> contains image assets used on the website / содержит все использованные в проекте изображения и иконки</li>
+<li><b>«dist/»</b> contains a compiled and optimized version of the project / содержит скомпилированную и оптимизированную версию проекта</li>
+<li><b>«fonts/»</b> contains custom fonts / содержит кастомные шрифты</li>
+<li><b>«images/»</b> contains all the images and icons used in the project / содержит все использованные в проекте изображения и иконки</li>
 <li><b>«src/»</b> contains source code, including JS and SCSS files / содержит исходный код, включая JS и SCSS файлы</li>
 
 <h3> <b> Built With / Использованные технологии </b> </h3>
