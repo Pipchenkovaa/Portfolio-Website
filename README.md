@@ -1,7 +1,7 @@
 <h1> Portfolio Website / Сайт-Портфолио </h1>
-This is my personal portfolio website where I showcase my skills & projects. The website is designed to be a simple yet effective way to showcase the work done and the quality of skills acquired in the field of frontend development.
+This is my personal portfolio website where I showcase my skills & projects. The website is designed to be a simple yet effective way to showcase the work done and the quality of skills acquired within 5 months in the field of frontend development.
 
-<br>Мой личный сайт-портфолио, на котором представлены мои проекты. Сайт разработан как простой и эффективный способ продемонстрировать проделанную работу, а также качество приобретенных навыков в области фронтенд разработки.
+<br>Мой личный сайт-портфолио, на котором представлены мои проекты. Сайт разработан как простой и эффективный способ продемонстрировать проделанную работу, а также качество приобретенных в течение 5 месяцев навыков в области фронтенд разработки.
 
 <h3> <b> 💡 Features / Особенности </b> </h3>
 <li>The website adapts to different screen sizes for a seamless experience on both desktop and mobile devices / Сайт подстраивается под разные размеры экранов</li>
@@ -10,10 +10,10 @@ This is my personal portfolio website where I showcase my skills & projects. The
 <li>Features an animated, infinite-scrolling tech stack banner that adjusts to screen sizes / Прокручивающийся список технологий, который подстраивается под размер экрана.</li>
 
 <h3> <b> ⚙️ Structure / Структура </b> </h3>
-<li><b>«dist/»</b> contains a compiled and optimized version of the project / содержит скомпилированную и оптимизированную версию проекта</li>
-<li><b>«fonts/»</b> contains custom fonts / содержит кастомные шрифты</li>
-<li><b>«images/»</b> contains all the images and icons used in the project / содержит все использованные в проекте изображения и иконки</li>
-<li><b>«src/»</b> contains source code, including JS and SCSS files / содержит исходный код, включая JS и SCSS файлы</li>
+<li><b>«dist/»</b> contains a compiled and optimized version of the project / папка «dist» содержит скомпилированную и оптимизированную версию проекта</li>
+<li><b>«fonts/»</b> contains custom fonts / папка «fonts» содержит кастомные шрифты</li>
+<li><b>«images/»</b> contains all the images and icons used in the project / папка «images» содержит все использованные в проекте изображения и иконки</li>
+<li><b>«src/»</b> contains source code, including JS and SCSS files / папка «src» содержит исходный код, включая JS и SCSS файлы</li>
 
 <h3> <b> Built With / Использованные технологии </b> </h3>
 HTML5 / CSS3 / SCSS / JavaScript (ES6+) / TailwindCSS / Webpack / Photoshop
