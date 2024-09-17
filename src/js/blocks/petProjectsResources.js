@@ -45,7 +45,7 @@ export const projectsResources = [
 		projectImageSrc: "./images/3d-forest.png",
 		projectImageAlt: "Webpage with 3D effect",
 		imageCardClass: "project-example dark-card",
-		projectDescription: "A simple webpage with a parallax effect, created primarily using JavaScript & Adobe Photoshop",
+		projectDescription: "A simple webpage with a parallax effect, created primarily using JavaScript, GSAP & Photoshop",
 		usedTechnologies: [
 			{
 				imageIcon: "./images/icons/scss.svg",
