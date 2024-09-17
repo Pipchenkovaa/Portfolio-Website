@@ -13,7 +13,7 @@ const headerCard = [
 		emailIconAlt: "Email Icon",
 		avatarImage: "./images/avatar.png",
 		avatarImageAlt: "Alina's avatar",
-		heading: "Hi there! My name's Alina and, above all else, I love ",
+		heading: "Hi there! My name's Alina and, above all, I love ",
 		text: "I'm currently studying at the HSE University, and my goal is to become a frontend developer and create modern, efficient web interfaces"
 	}
 ]

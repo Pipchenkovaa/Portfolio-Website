@@ -85,7 +85,7 @@ const headingContsctCard = createBlockElement(
 	"h1",
 	"headers-text-color",
 	null,
-	"Did You Become ",
+	"Got ",
 	spanInterestBlock
 )
 

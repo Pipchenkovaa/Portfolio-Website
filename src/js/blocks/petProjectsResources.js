@@ -40,12 +40,12 @@ export const projectsResources = [
 		]
 	},
 	{
-		projectName: "Website With A Parallax Effect",
-		href: "https://pipchenkovaa.github.io/Website-With-A-Parallax-Effect/",
+		projectName: "Webpage With A Parallax Effect",
+		href: "https://pipchenkovaa.github.io/Webpage-With-A-Parallax-Effect/",
 		projectImageSrc: "./images/3d-forest.png",
-		projectImageAlt: "3D Forest",
+		projectImageAlt: "Webpage with 3D effect",
 		imageCardClass: "project-example dark-card",
-		projectDescription: "A simple website with a parallax effect, created primarily using JavaScript & Adobe Photoshop",
+		projectDescription: "A simple webpage with a parallax effect, created primarily using JavaScript & Adobe Photoshop",
 		usedTechnologies: [
 			{
 				imageIcon: "./images/icons/scss.svg",
@@ -120,12 +120,12 @@ export const projectsResources = [
 		]
 	},
 	{
-		projectName: "Minimalistic News Website",
-		href: "https://pipchenkovaa.github.io/News-Website/",
+		projectName: "Minimalistic News Webpage",
+		href: "https://pipchenkovaa.github.io/News-Webpage/",
 		projectImageSrc: "./images/tailwind.png",
-		projectImageAlt: "News Website",
+		projectImageAlt: "News Webpage",
 		imageCardClass: "project-example light-card",
-		projectDescription: "A minimalist fashion news website, where I first used the Tailwind CSS framework",
+		projectDescription: "A minimalist fashion news webpage, where I first used the Tailwind CSS framework",
 		usedTechnologies: [
 			{
 				imageIcon: "./images/icons/tailwind.svg",
