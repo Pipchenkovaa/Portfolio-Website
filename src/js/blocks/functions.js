@@ -80,5 +80,6 @@ export const createTechStackList = (usedTechnologies) => {
 			techList.append(techItem)
 		}
 	)
+	techList.style.display = "flex"
 	return techList
 }

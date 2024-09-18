@@ -8,10 +8,22 @@ const projectsSectionTitle = createBlockElement(
 	null,
 	"Some examples of my work"
 )
+Object.assign(
+	projectsSectionTitle.style, {
+		display: "flex",
+		justifyContent: "center"
+	}
+)
 
 export const projectCardSection = createBlockElement(
 	"section",
 	"pet-projects",
+)
+Object.assign(
+	projectCardSection.style, {
+		display: "grid",
+		justifyContent: "center"
+	}
 )
 projectCardSection.append(projectsSectionTitle)
 
@@ -73,6 +85,14 @@ projectsResources.forEach(
 			projectImageWrapper,
 			projectDescriptionWrapper
 		)
+		if (projectWrapper.classList.contains("project-card")) {
+			Object.assign(
+				projectWrapper.style, {
+					// display: "flex",
+					alignItems: "center",
+				}
+			)
+		}
 		projectCardSection.append(projectWrapper)
 	}
 )

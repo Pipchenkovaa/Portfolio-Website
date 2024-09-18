@@ -1,6 +1,4 @@
 .pet-projects {
-	display: grid;
-	justify-content: center;
 	padding-block: var(--padding-most-common);
 
 	@include mobile {
@@ -9,8 +7,6 @@
 
 	h4 {
 		font-family: var(--font-family-body);
-		display: flex;
-		justify-content: center;
 		margin-bottom: calc(var(--margin-lg) + 5px);
 		font-size: var(--text-sm);
 
@@ -26,7 +22,6 @@
 
 	.project-card {
 		display: flex;
-		align-items: center;
 		max-width: calc(var(--size-md) + 100px);
 		border-radius: calc(var(--border-radius-lg) + 5px);
 		padding: calc(var(--padding-most-common) * 2);
@@ -170,8 +165,6 @@
 				padding-block: calc(var(--padding-sm) * (1 /3));
 
 				&__list {
-					display: flex;
-
 					@include mobile {
 						justify-content: center;
 					}
