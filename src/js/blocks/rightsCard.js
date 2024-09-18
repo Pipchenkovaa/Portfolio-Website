@@ -12,6 +12,9 @@ const rightsWrapper = createDivElement(
 	null,
 	initials
 )
+if (rightsWrapper.classList.contains("copy-rights")) {
+	rightsWrapper.style.setProperty("margin-bottom", "10px")
+}
 
 export const rightsSection = createBlockElement(
 	"section",

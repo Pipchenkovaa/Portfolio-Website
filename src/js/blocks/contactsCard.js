@@ -26,6 +26,12 @@ const socialMediaIcons = [
 const iconsWrapper = createDivElement(
 	"connection-icons"
 )
+Object.assign(
+	iconsWrapper.style, {
+		display: "flex",
+		justifyContent: "center",
+	}
+)
 
 socialMediaIcons.forEach(
 	elem => {

@@ -1,7 +1,6 @@
 import { createBlockElement, createDivElement, createLinkElement, createImageElement, createTechStackList } from "./functions.js"
 import { projectsResources } from "./petProjectsResources.js"
 
-
 const projectsSectionTitle = createBlockElement(
 	"h4",
 	"body-text-color",
@@ -88,7 +87,6 @@ projectsResources.forEach(
 		if (projectWrapper.classList.contains("project-card")) {
 			Object.assign(
 				projectWrapper.style, {
-					// display: "flex",
 					alignItems: "center",
 				}
 			)
