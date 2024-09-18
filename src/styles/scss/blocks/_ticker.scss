@@ -61,8 +61,6 @@
 		}
 
 		& {
-			position: absolute;
-			object-fit: contain;
 			inset-inline-start: var(--marquee-item-offset);
 			transform: translateX(-50% + 30);
 			animation: go linear var(--marquee-duration) var(--marquee-delay, 0s) infinite;

@@ -39,6 +39,14 @@ steckLogosList.forEach(
 			elem.alt,
 			"marquee__item stack-logo"
 		)
+		if (image.classList.contains("marquee__item")) {
+			Object.assign(
+				image.style, {
+					position: "absolute",
+					objectFit: "contain"
+				}
+			)
+		}
 		steckWrapper.append(image)
 	}
 )
