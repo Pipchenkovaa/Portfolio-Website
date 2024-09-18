@@ -78,7 +78,8 @@ if (githubLinkButton.classList.contains("connection")) {
 		githubLinkButton.style, {
 			display: "flex",
 			justifyContent: "center",
-			alignItems: "center"
+			alignItems: "center",
+			width: "100%"
 		}
 	)
 }
