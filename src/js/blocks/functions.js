@@ -82,13 +82,3 @@ export const createTechStackList = (usedTechnologies) => {
 	)
 	return techList
 }
-
-// export function addStyles(styles = {}) {
-// 	const keys = Object.keys(styles)
-// 	const array = keys.map(
-// 		key => {
-// 			return `${key}: ${styles[key]}`
-// 		}
-// 	)
-// 	return array.join(';')
-// }

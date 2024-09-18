@@ -53,6 +53,7 @@ const connectionConditions = createBlockElement(
 	"p",
 	"body-text-color"
 )
+
 connectionConditions.innerHTML = "Available Hours: 9:00 AM – 9:00 PM <br> (Moscow Time)"
 
 const spanContactConditions = createBlockElement(
@@ -83,4 +84,10 @@ export const contactsSection = createBlockElement(
 	"footer",
 	null,
 	connectionMainWrapper
+)
+Object.assign(
+	contactsSection.style, {
+		display: "inline-flexbox",
+		textAlign: "center",
+	}
 )

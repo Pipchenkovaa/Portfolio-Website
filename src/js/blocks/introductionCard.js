@@ -40,6 +40,15 @@ headerCard.forEach(
 			GithubIcon,
 			GithubButtonText
 		)
+		if (GithubAccountLink.classList.contains("connection")) {
+			Object.assign(
+				GithubAccountLink.style, {
+					display: "flex",
+					justifyContent: "space-between",
+					padding: "8px 16px"
+				}
+			)
+		}
 		const telegramIconHeader = createImageElement(
 			elem.telegramIcon,
 			elem.telegramIconAlt,
@@ -100,11 +109,15 @@ headerCard.forEach(
 			elem.avatarImageAlt,
 			"avatar__image"
 		)
+		avatsrImg.style.margin = "auto"
 		const avatarCard = createDivElement(
 			"card avatar background-gradient border-common",
 			null,
 			avatsrImg
 		)
+		if (avatarCard.classList.contains("avatar")) {
+			avatarCard.style.display = "flex"
+		}
 		headerSection.append(informationCard, avatarCard)
 	}
 )

@@ -1,6 +1,4 @@
 .footer {
-	display: inline-flexbox;
-	text-align: center;
 	margin-block: var(--margin-md);
 
 	@include desktop {
@@ -53,7 +51,7 @@
 			}
 
 			@include mobile {
-				font-size: calc(var(--text-lg) - 15px);
+				font-size: calc(var(--text-lg) - 12px);
 				margin-bottom: calc(var(--margin-sm) * 0.5);
 			}
 		}
@@ -99,8 +97,6 @@
 }
 
 .rights {
-	display: flex;
-	justify-content: center;
 	font-family: var(--font-family-body);
 
 	.copy-rights {

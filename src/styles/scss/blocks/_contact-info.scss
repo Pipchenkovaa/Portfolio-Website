@@ -1,6 +1,4 @@
 .services {
-	display: grid;
-	justify-items: center;
 	margin: var(--margin-md);
 
 	@include tablet {
@@ -70,16 +68,13 @@
 
 			@include mobile {
 				text-align: center;
-				font-size: calc(var(--text-lg) - 15px);
+				font-size: calc(var(--text-lg) - 12px);
 				margin-bottom: calc(var(--margin-sm) + 5px);
 				line-height: calc(var(--line-height-lg) - 10px);
 			}
 		}
 
 		.proposed-services {
-			display: flex;
-			justify-content: space-between;
-
 			.first-service {
 				padding-right: calc(var(--padding-sm) - 5px);
 			}
@@ -119,9 +114,6 @@
 		}
 
 		.connection {
-			display: flex;
-			justify-content: center;
-			align-items: center;
 			font-family: var(--font-family-body);
 			font-size: var(--text-sm);
 			padding: var(--padding-sm);
@@ -142,8 +134,6 @@
 		}
 
 		&__register {
-			display: flex;
-			
 			.arrow {
 				padding-inline: calc(var(--padding-sm) * (1 / 3));
 

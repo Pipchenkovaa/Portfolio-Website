@@ -71,9 +71,6 @@
 				}
 
 				.connection {
-					display: flex;
-					justify-content: space-between;
-					padding: 8px 16px;
 					border-radius: var(--border-radius-sm);
 					box-shadow: var(--shadow-icons);
 					font-size: calc(var(--text-sm) - 2px);
@@ -172,7 +169,6 @@
 		}
 
 		.avatar {
-			display: flex;
 			min-width: calc(var(--size-sm) + (var(--size-sm) / 10));
 
 			@include desktop {
@@ -190,7 +186,6 @@
 			 }
 			
 			&__image {
-				margin: auto;
 				width: calc(var(--size-sm) - 30px);
 				
 				@include tablet {

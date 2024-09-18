@@ -19,3 +19,9 @@ export const rightsSection = createBlockElement(
 	null,
 	rightsWrapper
 )
+Object.assign(
+	rightsSection.style, {
+		display: "flex",
+		justifyContent: "center",
+	}
+)

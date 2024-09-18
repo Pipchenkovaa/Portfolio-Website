@@ -21,6 +21,16 @@ const tickerHeading = createBlockElement(
 const steckWrapper = createDivElement(
 	"technology-stack__scrolling-wrapper marquee marquee--8"
 )
+Object.assign(
+	steckWrapper.style, {
+		position: "relative",
+		display: "flex",
+		alignItems: "center",
+		justifyContent: "center",
+		overflowX: "hidden",
+		margin: "0 auto"
+	}
+)
 
 steckLogosList.forEach(
 	elem => {
@@ -39,4 +49,10 @@ export const tickerSection = createBlockElement(
 	null,
 	tickerHeading,
 	steckWrapper
+)
+Object.assign(
+	tickerSection.style, {
+		display: "inline",
+		textAlign: "center",
+	}
 )

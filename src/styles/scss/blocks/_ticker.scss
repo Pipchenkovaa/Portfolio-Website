@@ -1,6 +1,4 @@
 .technology-stack {
-	display: inline;
-	text-align: center;
 	font-family: var(--font-family-body);
 	max-width: var(--size-md);
 
@@ -15,14 +13,8 @@
 	}
 
 	&__scrolling-wrapper {
-		position: relative;
-		display: flex;
-		align-items: center;
-		justify-content: center;
 		max-width: calc(var(--size-md) - 200px);
-		margin: 0 auto;
 		height: calc((var(--size-sm) / 3) - 10px);
-		overflow-x: hidden;
 		mask-image: linear-gradient(
 			to right,
 			rgba(9, 9, 9, 0),

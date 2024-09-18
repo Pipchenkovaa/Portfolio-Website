@@ -46,6 +46,12 @@ const servicesWrapper = createDivElement(
 	firstServiceBlock,
 	secondServiceBlock
 )
+Object.assign(
+	servicesWrapper.style, {
+		display: "flex",
+		justifyContent: "space-between",
+	}
+)
 
 const githubButtonText = createBlockElement(
 	"p",
@@ -67,12 +73,22 @@ const githubLinkButton = createLinkElement(
 	githubButtonText,
 	arrowIcon
 )
+if (githubLinkButton.classList.contains("connection")) {
+	Object.assign(
+		githubLinkButton.style, {
+			display: "flex",
+			justifyContent: "center",
+			alignItems: "center"
+		}
+	)
+}
 
 const buttonContactWrapper = createDivElement(
 	"intrest-form-content__register",
 	null,
 	githubLinkButton
 )
+buttonContactWrapper.style.display = "flex"
 
 const spanInterestBlock = createBlockElement(
 	"span",
@@ -102,4 +118,10 @@ export const scopesSection = createBlockElement(
 	"services",
 	null,
 	interestCardWrapper
+)
+Object.assign(
+	scopesSection.style, {
+		display: "grid",
+		justifyItems: "center",
+	}
 )
