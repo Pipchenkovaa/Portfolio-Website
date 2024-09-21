@@ -1,5 +1,5 @@
 import { createBlockElement, createDivElement, createLinkElement, createImageElement, createTechStackList } from "./functions.js"
-import { projectsResources } from "./petProjectsResources.js"
+import { ProjectsResources } from "./petProjectsResources.js"
 
 const projectsSectionTitle = createBlockElement(
 	"h4",
@@ -26,7 +26,7 @@ Object.assign(
 )
 projectCardSection.append(projectsSectionTitle)
 
-projectsResources.forEach(
+ProjectsResources.forEach(
 	elem => {
 		const projectImg = createImageElement(
 			elem.projectImageSrc,

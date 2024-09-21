@@ -1,6 +1,6 @@
 import { createBlockElement, createDivElement, createImageElement } from "./functions.js"
 
-const steckLogosList = [
+const SteckLogosList = [
 	{ src:"./images/icons/html.svg", alt:"HTML Logo" },
 	{ src:"./images/icons/css.svg", alt:"CSS Logo" },
 	{ src:"./images/icons/tailwind.svg", alt:"Tailwindcss Logo" },
@@ -32,7 +32,7 @@ Object.assign(
 	}
 )
 
-steckLogosList.forEach(
+SteckLogosList.forEach(
 	elem => {
 		const image = createImageElement(
 			elem.src,

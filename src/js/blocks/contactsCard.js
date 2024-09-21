@@ -1,6 +1,6 @@
 import { createBlockElement, createDivElement, createLinkElement, createImageElement } from "./functions.js"
 
-const socialMediaIcons = [
+const SocialMediaIcons = [
 	{
 		href: "https://t.me/@pip_ch",
 		src: "./images/icons/telegram-icon.svg",
@@ -33,7 +33,7 @@ Object.assign(
 	}
 )
 
-socialMediaIcons.forEach(
+SocialMediaIcons.forEach(
 	elem => {
 		const iconImage = createImageElement(
 			elem.src,

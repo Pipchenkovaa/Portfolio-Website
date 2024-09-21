@@ -1,4 +1,4 @@
-export const projectsResources = [
+export const ProjectsResources = [
 	{
 		projectName: "Fantasy Authorization Form",
 		href: "https://pipchenkovaa.github.io/Authorization-Form/",

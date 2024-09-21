@@ -1,6 +1,6 @@
 import { createBlockElement, createDivElement, createLinkElement, createImageElement } from "./functions.js"
 
-const headerCard = [
+const HeaderCard = [
 	{
 		githubLink: "https://github.com/Pipchenkovaa",
 		githubIcon: "./images/icons/github.svg",
@@ -20,7 +20,7 @@ const headerCard = [
 
 export const headerSection = createBlockElement("section", "introduction")
 
-headerCard.forEach(
+HeaderCard.forEach(
 	elem => {
 		const GithubIcon = createImageElement(
 			elem.githubIcon,
