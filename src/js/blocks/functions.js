@@ -48,6 +48,7 @@ export const createImageElement = (src, alt, className, width) => {
 	const image = document.createElement("img")
 	image.src = src
 	image.alt = alt
+	image.loading = 'lazy'
 	if (className) {
 		image.className = className
 	}
