@@ -1,8 +1,15 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = {
+	optimization: {
+    minimizer: [
+      '...',
+      new CssMinimizerPlugin(),
+    ],
+  },
   entry: './src/js/index.js',
   output: {
     filename: 'bundle.js',
