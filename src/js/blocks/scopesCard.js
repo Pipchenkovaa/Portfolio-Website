@@ -4,13 +4,13 @@ const headingFirstService = createBlockElement(
 	"h5",
 	"headers-text-color"
 )
-headingFirstService.innerHTML = "&#10022;  Layout Design Development"
+headingFirstService.innerHTML = "&#10022;  Landing Development"
 
 const paragraphFirstService = createBlockElement(
 	"p",
 	"body-text-color",
 	null,
-	"I'll design an exquisite website based on your existing ready-made layout, with a focus on styles"
+	"I'll design an exquisite website based on your existing ready-made layout, with a focus on styles (I'll create a landing page)"
 )
 
 const firstServiceBlock = createDivElement(
@@ -30,7 +30,7 @@ const paragraphSecondService = createBlockElement(
 	"p",
 	"body-text-color",
 	null,
-	"I'll create a fully responsive & unique website that focuses on JavaScript development"
+	"I'll create a fully responsive & unique website that focuses on JavaScript/TypeScript development"
 )
 
 const secondServiceBlock = createDivElement(

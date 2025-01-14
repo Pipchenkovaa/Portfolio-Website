@@ -27,4 +27,4 @@ HTML5 / CSS3 / SCSS / JavaScript (ES6+) / TailwindCSS / Webpack / Photoshop
 5) Open the project in your browser / Открываем проект локально в браузере: `http://localhost:3000`<br>
 
 <h3> <b> ©️ Author / Авторство </b> </h3>
-© Pipchencova Alina, 2024
+© Pipchenkova Alina, 2025
