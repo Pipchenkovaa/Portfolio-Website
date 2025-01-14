@@ -4,7 +4,7 @@ const initials = createBlockElement(
 	"p",
 	null,
 	null,
-	"© Pipchencova Alina, 2024"
+	"© Pipchenkova Alina, 2025"
 )
 
 const rightsWrapper = createDivElement(
