@@ -588,6 +588,30 @@ video {
   }
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.inline {
+  display: inline;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.hidden {
+  display: none;
+}
+
 .bg-mainDarkTheme {
   --tw-bg-opacity: 1;
   background-color: rgb(9 9 9 / var(--tw-bg-opacity));
