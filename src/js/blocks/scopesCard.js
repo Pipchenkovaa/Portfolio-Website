@@ -30,7 +30,7 @@ const paragraphSecondService = createBlockElement(
 	"p",
 	"body-text-color",
 	null,
-	"I'll create a fully responsive & unique website that focuses on JavaScript/TypeScript development"
+	"I'll create a fully responsive & unique website that focuses on JavaScript or TypeScript development"
 )
 
 const secondServiceBlock = createDivElement(

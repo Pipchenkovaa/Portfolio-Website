@@ -77,10 +77,19 @@
 		.proposed-services {
 			.first-service {
 				padding-right: calc(var(--padding-sm) - 5px);
+				
+				@include mobile {
+					padding-left: calc(var(--padding-sm) - 13px);
+					padding-right: calc(var(--padding-sm) + 10px);
+				}
 			}
 			
 			#frontend {
 				padding-left: var(--padding-sm);
+
+				@include mobile {
+					padding-left: calc(var(--padding-sm) + 13px);
+				}
 			}
 
 			.first-service,
